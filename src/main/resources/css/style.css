@@ -1,0 +1,177 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1d2b45;
+}
+
+.app-shell, .dashboard, .dashboard-scroll, .dashboard-scroll > .viewport {
+    -fx-background-color: #f6f8fc;
+}
+
+.dashboard-scroll {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.sidebar {
+    -fx-background-color: white;
+    -fx-border-color: transparent #e9edf4 transparent transparent;
+}
+
+.brand-mark {
+    -fx-background-color: #2563eb;
+    -fx-background-radius: 12;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-min-width: 42;
+    -fx-min-height: 42;
+}
+
+.brand-name { -fx-font-size: 17px; -fx-font-weight: bold; -fx-text-fill: #182743; }
+.brand-caption { -fx-font-size: 9px; -fx-font-weight: bold; -fx-text-fill: #9aa8bb; }
+.sidebar-caption, .eyebrow { -fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #8b9ab0; }
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 9;
+    -fx-text-fill: #63738a;
+    -fx-font-weight: bold;
+    -fx-alignment: center-left;
+    -fx-padding: 12 14;
+    -fx-cursor: hand;
+}
+.nav-button:hover { -fx-background-color: #f2f6fd; }
+.nav-active, .nav-active:hover { -fx-background-color: #eaf1ff; -fx-text-fill: #2563eb; }
+.sidebar-note { -fx-background-color: #f0f5ff; -fx-background-radius: 12; -fx-padding: 15; }
+.sidebar-note-title { -fx-font-weight: bold; -fx-text-fill: #315588; }
+.sidebar-note-text { -fx-font-size: 11px; -fx-text-fill: #6b81a2; }
+.sidebar-footer { -fx-font-size: 11px; -fx-text-fill: #8b9ab0; }
+
+.page-title { -fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #17243b; }
+.page-subtitle, .section-subtitle { -fx-text-fill: #8b9ab0; }
+.month-picker {
+    -fx-background-color: white;
+    -fx-background-radius: 9;
+    -fx-border-color: #e5eaf2;
+    -fx-border-radius: 9;
+    -fx-padding: 3;
+}
+.month-label { -fx-font-weight: bold; -fx-text-fill: #3a4b64; }
+.month-arrow {
+    -fx-background-color: transparent;
+    -fx-text-fill: #70819b;
+    -fx-font-size: 19px;
+    -fx-padding: 1 9;
+    -fx-cursor: hand;
+}
+.month-arrow:hover { -fx-background-color: #edf3ff; -fx-background-radius: 6; }
+.section-tag {
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7890ae;
+    -fx-background-color: #f1f5fa;
+    -fx-background-radius: 5;
+    -fx-padding: 5 8;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #e9edf5;
+    -fx-border-radius: 12;
+}
+.summary-card { -fx-min-width: 0; -fx-max-width: infinity; }
+.summary-title { -fx-text-fill: #728198; -fx-font-weight: bold; }
+.summary-icon {
+    -fx-background-color: #edf4ff;
+    -fx-background-radius: 8;
+    -fx-text-fill: #3574e8;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-min-width: 32;
+    -fx-min-height: 32;
+}
+.expense-icon { -fx-background-color: #fff2ed; -fx-text-fill: #e88961; }
+.balance-icon { -fx-background-color: #eaf8f3; -fx-text-fill: #35a878; }
+.summary-amount { -fx-font-size: 21px; -fx-font-weight: bold; -fx-text-fill: #1c2a42; }
+.summary-detail { -fx-font-size: 11px; -fx-text-fill: #99a6b8; }
+.section-card { -fx-padding: 18 20 14 20; }
+.section-title { -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #23334d; }
+.empty-state { -fx-text-fill: #8b9ab0; -fx-padding: 22 0; }
+.default-color0.chart-bar { -fx-bar-fill: #3c78ed; }
+
+.chart { -fx-padding: 0; }
+.chart-content { -fx-padding: 0; }
+.chart-legend { -fx-background-color: transparent; -fx-padding: 0 12; }
+.chart-legend-item { -fx-text-fill: #65758d; -fx-padding: 4; }
+.chart-pie { -fx-border-color: white; -fx-border-width: 2; }
+.default-color0.chart-pie, .default-color0.chart-legend-item-symbol { -fx-pie-color: #3c78ed; -fx-background-color: #3c78ed; }
+.default-color1.chart-pie, .default-color1.chart-legend-item-symbol { -fx-pie-color: #78a7ff; -fx-background-color: #78a7ff; }
+.default-color2.chart-pie, .default-color2.chart-legend-item-symbol { -fx-pie-color: #9bcfd2; -fx-background-color: #9bcfd2; }
+.default-color3.chart-pie, .default-color3.chart-legend-item-symbol { -fx-pie-color: #f0bc80; -fx-background-color: #f0bc80; }
+.default-color4.chart-pie, .default-color4.chart-legend-item-symbol { -fx-pie-color: #c6d1e0; -fx-background-color: #c6d1e0; }
+
+.table-heading {
+    -fx-padding: 9 0 7 0;
+    -fx-border-color: transparent transparent #edf1f6 transparent;
+}
+.table-heading .label { -fx-font-size: 10px; -fx-font-weight: bold; -fx-text-fill: #9ba8b9; }
+.transaction-row {
+    -fx-padding: 10 0;
+    -fx-border-color: transparent transparent #f1f4f8 transparent;
+}
+.transaction-name { -fx-font-weight: bold; -fx-text-fill: #33445e; }
+.transaction-category, .transaction-date { -fx-text-fill: #8492a6; }
+.transaction-amount { -fx-font-weight: bold; -fx-text-fill: #33445e; }
+.transaction-income { -fx-text-fill: #2da174; }
+
+.filter-card, .table-card { -fx-padding: 18 20; }
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 16;
+    -fx-cursor: hand;
+}
+.primary-button:hover { -fx-background-color: #1d4ed8; }
+.primary-button:disabled, .secondary-button:disabled, .danger-button:disabled { -fx-opacity: 0.45; }
+.secondary-button, .danger-button {
+    -fx-background-color: #f0f4fa;
+    -fx-background-radius: 8;
+    -fx-text-fill: #536780;
+    -fx-padding: 9 14;
+    -fx-cursor: hand;
+}
+.danger-button { -fx-background-color: #fff1f1; -fx-text-fill: #bd4d4d; }
+.secondary-button:hover { -fx-background-color: #e4ecf8; }
+.danger-button:hover { -fx-background-color: #ffe2e2; }
+.button:focused { -fx-border-color: #90b4ff; -fx-border-radius: 8; }
+.form-label { -fx-text-fill: #536780; -fx-font-weight: bold; }
+.form-error { -fx-text-fill: #bd3333; }
+.status-success { -fx-text-fill: #21865e; -fx-font-weight: bold; }
+.status-error { -fx-text-fill: #bd3333; }
+.text-field, .combo-box, .date-picker {
+    -fx-background-radius: 7;
+    -fx-border-color: #e2e8f1;
+    -fx-border-radius: 7;
+    -fx-background-color: white;
+}
+.table-view { -fx-background-color: transparent; -fx-border-color: #edf1f6; }
+.table-view .column-header-background, .table-view .column-header, .table-view .filler {
+    -fx-background-color: #f7f9fc;
+}
+.table-view .column-header .label { -fx-text-fill: #718198; -fx-font-weight: bold; }
+.table-row-cell { -fx-background-color: white; -fx-border-color: transparent transparent #f1f4f8 transparent; }
+.table-row-cell:selected { -fx-background-color: #eaf1ff; }
+.table-row-cell:selected .text { -fx-fill: #1d2b45; }
+.table-view .column-header { -fx-size: 40; }
+.table-row-cell { -fx-cell-size: 40; }
+.table-row-cell:hover:filled { -fx-background-color: #f3f7ff; }
+.table-row-cell:selected:hover { -fx-background-color: #eaf1ff; }
+.tab-pane .tab-header-background { -fx-background-color: #f7f9fc; }
+.tab-pane .tab { -fx-background-color: transparent; -fx-padding: 8 18; }
+.tab-pane .tab:selected { -fx-background-color: #eaf1ff; }
+.tab-pane .tab:selected .tab-label { -fx-text-fill: #2563eb; -fx-font-weight: bold; }

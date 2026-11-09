@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:id="root"
+            fx:controller="com.moneytrack.controller.MainController"
+            styleClass="app-shell">
+    <left>
+        <fx:include fx:id="sidebar" source="sidebar.fxml" />
+    </left>
+    <center>
+        <ScrollPane fx:id="dashboardView" fitToWidth="true" hbarPolicy="NEVER" styleClass="dashboard-scroll">
+            <content>
+                <fx:include fx:id="dashboard" source="dashboard.fxml" />
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

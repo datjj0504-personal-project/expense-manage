@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="16" styleClass="dashboard" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.moneytrack.controller.SettingsController">
+    <padding><Insets top="28" right="30" bottom="30" left="30" /></padding>
+    <Label text="Settings" styleClass="page-title" />
+    <Label text="Application information" styleClass="page-subtitle" />
+    <VBox spacing="14" styleClass="card, section-card">
+        <Label text="About MoneyTrack" styleClass="section-title" />
+        <Label text="A personal finance application for tracking income and expenses." wrapText="true" />
+        <Label text="APPLICATION VERSION" styleClass="eyebrow" />
+        <Label fx:id="versionLabel" />
+        <Label text="DATABASE LOCATION" styleClass="eyebrow" />
+        <TextField fx:id="databasePath" editable="false" />
+        <Label text="Your data is stored locally in SQLite." styleClass="section-subtitle" />
+    </VBox>
+</VBox>

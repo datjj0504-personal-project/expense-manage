@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="dashboard-scroll"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.moneytrack.controller.ReportsController">
+    <content>
+        <VBox spacing="16" styleClass="dashboard">
+            <padding><Insets top="28" right="30" bottom="30" left="30" /></padding>
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label text="Reports" styleClass="page-title" />
+                    <Label text="Understand your monthly finances" styleClass="page-subtitle" />
+                </VBox>
+                <HBox alignment="CENTER" spacing="4" styleClass="month-picker">
+                    <Button text="‹" accessibleText="Previous report month" onAction="#previousMonth" styleClass="month-arrow" />
+                    <Label fx:id="monthLabel" minWidth="112" alignment="CENTER" styleClass="month-label" />
+                    <Button text="›" accessibleText="Next report month" onAction="#nextMonth" styleClass="month-arrow" />
+                </HBox>
+            </HBox>
+            <Label fx:id="statusLabel" styleClass="section-subtitle" wrapText="true" />
+            <HBox spacing="14">
+                <fx:include fx:id="incomeCard" source="summary-card.fxml" HBox.hgrow="ALWAYS" />
+                <fx:include fx:id="expenseCard" source="summary-card.fxml" HBox.hgrow="ALWAYS" />
+                <fx:include fx:id="balanceCard" source="summary-card.fxml" HBox.hgrow="ALWAYS" />
+            </HBox>
+            <VBox spacing="10" styleClass="card, section-card">
+                <Label text="Monthly income versus expenses" styleClass="section-title" />
+                <BarChart fx:id="comparisonChart" animated="false" legendVisible="false" prefHeight="220">
+                    <xAxis><CategoryAxis /></xAxis>
+                    <yAxis><NumberAxis label="VND" forceZeroInRange="true" /></yAxis>
+                </BarChart>
+                <Label fx:id="comparisonEmpty" text="No transactions for this month." styleClass="empty-state" />
+            </VBox>
+            <VBox spacing="10" styleClass="card, section-card">
+                <Label text="Monthly expense report" styleClass="section-title" />
+                <Label text="Expense by category" styleClass="section-subtitle" />
+                <TableView fx:id="categoryTable" prefHeight="220">
+                    <columns>
+                        <TableColumn fx:id="categoryColumn" text="Category" prefWidth="250" />
+                        <TableColumn fx:id="totalColumn" text="Total (VND)" prefWidth="200" />
+                    </columns>
+                </TableView>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>

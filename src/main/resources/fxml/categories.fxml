@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="16" styleClass="dashboard" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.moneytrack.controller.CategoriesController">
+    <padding><Insets top="28" right="30" bottom="30" left="30" /></padding>
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <VBox spacing="4" HBox.hgrow="ALWAYS">
+            <Label text="Categories" styleClass="page-title" />
+            <Label text="Organize your income and expenses" styleClass="page-subtitle" />
+        </VBox>
+        <Button fx:id="addButton" text="+ Add category" onAction="#add" styleClass="primary-button" />
+    </HBox>
+    <VBox spacing="12" styleClass="card, table-card" VBox.vgrow="ALWAYS">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Your categories" styleClass="section-title" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+            <Button fx:id="editButton" text="Edit" onAction="#edit" styleClass="secondary-button" />
+            <Button fx:id="deleteButton" text="Delete" onAction="#delete" styleClass="danger-button" />
+        </HBox>
+        <TabPane fx:id="tabs" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+            <Tab text="Expense">
+                <TableView fx:id="expenseTable">
+                    <columns><TableColumn fx:id="expenseName" text="Category name" /></columns>
+                </TableView>
+            </Tab>
+            <Tab text="Income">
+                <TableView fx:id="incomeTable">
+                    <columns><TableColumn fx:id="incomeName" text="Category name" /></columns>
+                </TableView>
+            </Tab>
+        </TabPane>
+        <Label fx:id="statusLabel" styleClass="page-subtitle" text="Loading categories…" wrapText="true" />
+    </VBox>
+</VBox>

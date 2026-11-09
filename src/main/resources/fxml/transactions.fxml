@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="16.0" styleClass="dashboard"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.moneytrack.controller.TransactionsController">
+    <padding><Insets top="28" right="30" bottom="30" left="30" /></padding>
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <VBox spacing="4" HBox.hgrow="ALWAYS">
+            <Label text="Transactions" styleClass="page-title" />
+            <Label text="Manage your income and expenses" styleClass="page-subtitle" />
+        </VBox>
+        <Button fx:id="addButton" text="+ Add transaction" onAction="#addTransaction" styleClass="primary-button" />
+    </HBox>
+    <VBox spacing="12" styleClass="card, filter-card">
+        <Label text="FILTER TRANSACTIONS" styleClass="eyebrow" />
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="searchField" promptText="Search description" HBox.hgrow="ALWAYS" />
+            <ComboBox fx:id="typeFilter" prefWidth="140" />
+            <DatePicker fx:id="dateFilter" promptText="All dates" prefWidth="150" editable="false" />
+            <Button text="Clear" onAction="#clearFilters" styleClass="secondary-button" />
+        </HBox>
+    </VBox>
+    <VBox spacing="12" styleClass="card, table-card" VBox.vgrow="ALWAYS">
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="All transactions" styleClass="section-title" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+            <Button fx:id="editButton" text="Edit" onAction="#editTransaction" styleClass="secondary-button" />
+            <Button fx:id="deleteButton" text="Delete" onAction="#deleteTransaction" styleClass="danger-button" />
+        </HBox>
+        <TableView fx:id="table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="dateColumn" text="Date" prefWidth="110" />
+                <TableColumn fx:id="descriptionColumn" text="Description" prefWidth="220" />
+                <TableColumn fx:id="categoryColumn" text="Category" prefWidth="150" />
+                <TableColumn fx:id="typeColumn" text="Type" prefWidth="100" />
+                <TableColumn fx:id="amountColumn" text="Amount (VND)" prefWidth="150" />
+            </columns>
+        </TableView>
+        <Label fx:id="statusLabel" text="Loading transactions…" styleClass="page-subtitle" />
+    </VBox>
+</VBox>

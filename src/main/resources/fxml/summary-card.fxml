@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10.0" styleClass="card, summary-card"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.moneytrack.controller.SummaryCardController">
+    <padding><Insets top="18.0" right="20.0" bottom="18.0" left="20.0" /></padding>
+    <HBox alignment="CENTER_LEFT">
+        <Label fx:id="titleLabel" styleClass="summary-title" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Label fx:id="iconLabel" styleClass="summary-icon" />
+    </HBox>
+    <Label fx:id="amountLabel" styleClass="summary-amount" />
+    <Label fx:id="detailLabel" styleClass="summary-detail" />
+</VBox>

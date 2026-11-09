@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox spacing="12" prefWidth="360" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.moneytrack.controller.CategoryFormController">
+    <padding><Insets top="10" right="4" bottom="4" left="4" /></padding>
+    <Label text="Category name" styleClass="form-label" />
+    <TextField fx:id="nameField" promptText="Enter a category name" />
+    <Label text="Type" styleClass="form-label" />
+    <ComboBox fx:id="typeField" maxWidth="Infinity" />
+    <Label fx:id="errorLabel" wrapText="true" styleClass="form-error" />
+</VBox>

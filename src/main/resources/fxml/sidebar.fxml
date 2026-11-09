@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="220.0" minWidth="200.0" spacing="8.0" styleClass="sidebar"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.moneytrack.controller.SidebarController">
+    <padding><Insets top="30.0" right="16.0" bottom="24.0" left="16.0" /></padding>
+    <HBox alignment="CENTER_LEFT" spacing="11.0" styleClass="brand">
+        <Label text="M" styleClass="brand-mark" />
+        <VBox spacing="2.0">
+            <Label text="MoneyTrack" styleClass="brand-name" />
+            <Label text="PERSONAL FINANCE" styleClass="brand-caption" />
+        </VBox>
+    </HBox>
+    <Label text="MENU" styleClass="sidebar-caption">
+        <VBox.margin><Insets top="32.0" bottom="8.0" left="12.0" /></VBox.margin>
+    </Label>
+    <Button fx:id="dashboardButton" text="Dashboard" styleClass="nav-button, nav-active" maxWidth="Infinity"
+            onAction="#showDashboard" />
+    <Button fx:id="transactionsButton" text="Transactions" styleClass="nav-button" maxWidth="Infinity"
+            onAction="#showTransactions" />
+    <Button fx:id="categoriesButton" text="Categories" styleClass="nav-button" maxWidth="Infinity"
+            onAction="#showCategories" />
+    <Button fx:id="reportsButton" text="Reports" styleClass="nav-button" maxWidth="Infinity"
+            onAction="#showReports" />
+    <Button fx:id="settingsButton" text="Settings" styleClass="nav-button" maxWidth="Infinity"
+            onAction="#showSettings" />
+    <Region VBox.vgrow="ALWAYS" />
+    <VBox spacing="7.0" styleClass="sidebar-note">
+        <Label text="A clearer picture" styleClass="sidebar-note-title" />
+        <Label text="A little progress adds up. Keep track of what matters." wrapText="true"
+               styleClass="sidebar-note-text" />
+    </VBox>
+    <Label fx:id="navigationMessage" text="Dashboard" wrapText="true" styleClass="sidebar-footer">
+        <VBox.margin><Insets top="8.0" left="3.0" /></VBox.margin>
+    </Label>
+</VBox>

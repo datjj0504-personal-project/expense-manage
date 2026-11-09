@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="12" prefWidth="400" styleClass="transaction-form"
+      xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.moneytrack.controller.TransactionFormController">
+    <padding><Insets top="10" right="4" bottom="4" left="4" /></padding>
+    <Label text="Type" styleClass="form-label" />
+    <ComboBox fx:id="typeField" maxWidth="Infinity" />
+    <Label text="Category" styleClass="form-label" />
+    <ComboBox fx:id="categoryField" promptText="Select a category" maxWidth="Infinity" />
+    <Label text="Amount (VND)" styleClass="form-label" />
+    <TextField fx:id="amountField" promptText="Whole VND amount" />
+    <Label text="Description" styleClass="form-label" />
+    <TextField fx:id="descriptionField" promptText="Optional description" />
+    <Label text="Date" styleClass="form-label" />
+    <DatePicker fx:id="dateField" editable="false" maxWidth="Infinity" />
+    <Label fx:id="errorLabel" wrapText="true" styleClass="form-error" />
+</VBox>
